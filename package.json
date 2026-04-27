@@ -1,7 +1,7 @@
 {
   "name": "pandect",
-  "version": "0.2.1",
-  "description": "Opinionated rulebooks for AI coding agents — one .md per stack. Hand the file to Claude Code, Codex, or Cursor and ship.",
+  "version": "0.2.2",
+  "description": "Stop setting up, start shipping. 33 opinionated stack rulebooks for AI coding agents (Claude Code, Codex, Cursor). One markdown file per stack — every decision pre-made, every version cited. npx pandect <stack>.",
   "type": "module",
   "bin": {
     "pandect": "bin/pandect.mjs"

@@ -2,9 +2,9 @@
 
 # pandect
 
-### One markdown file. Every decision your AI coding agent needs.
+### Stop setting up. Start shipping.
 
-Hand `RULEBOOK.md` + your idea to **Claude Code**, **Codex**, or **Cursor** — they bootstrap, build, and ship without asking 50 questions.
+33 production-tuned stack rulebooks for AI coding agents. One markdown file per stack — every decision pre-made, every version cited, every config inlined. Hand it to **Claude Code**, **Codex**, or **Cursor** and skip the 50 setup questions.
 
 [![npm version](https://img.shields.io/npm/v/pandect?color=cb3837&labelColor=000)](https://www.npmjs.com/package/pandect)
 [![npm downloads](https://img.shields.io/npm/dm/pandect?color=44cc11&labelColor=000)](https://www.npmjs.com/package/pandect)
@@ -22,6 +22,18 @@ hand this file + your idea to Claude Code, Codex, or Cursor.
 ```
 
 ---
+
+## What gets killed
+
+Tired of:
+
+- Burning a Saturday on `package.json`, `tsconfig.json`, and `.eslintrc` before writing a single feature
+- Your AI agent asking *"which test framework?"* for the 100th time this month
+- Choosing between five ORMs that all look identical at the docs level
+- Re-implementing auth, file uploads, and Stripe checkout from scratch every project
+- Hitting prod with a config nobody reviewed because nobody had time to review it
+
+Hand your AI a pandect rulebook and every one of those bullets is gone. That's the entire pitch.
 
 ## The problem
 

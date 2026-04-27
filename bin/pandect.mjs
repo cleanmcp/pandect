@@ -66,7 +66,8 @@ function resolveStack(input) {
 function help() {
   const stacks = listStacks();
   const lines = [
-    paint('bold', 'pandect') + ' — opinionated rulebooks for AI coding agents',
+    paint('bold', 'pandect') + ' — stop setting up, start shipping.',
+    paint('dim', '  33 opinionated stack rulebooks for AI coding agents.'),
     '',
     paint('bold', 'Usage:'),
     '  npx pandect <stack>          download rulebook to ./RULEBOOK.md',
