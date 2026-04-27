@@ -15,12 +15,52 @@ const C = {
 const tty = stdout.isTTY && !process.env.NO_COLOR;
 const paint = (col, s) => (tty ? `${C[col]}${s}${C.reset}` : s);
 
+// Backward-compat: old long names → new short names. Both forms work.
+const ALIASES = {
+  'swiftui-ios': 'ios',
+  'swiftui-mac': 'mac',
+  'jetpack-compose-android': 'android',
+  'react-native-expo': 'expo',
+  'flutter-firebase': 'flutter',
+  'electron-react': 'electron',
+  'tauri-svelte': 'tauri',
+  'nextjs-supabase': 'nextjs',
+  'vite-react': 'vite',
+  'astro-cloudflare': 'astro',
+  'fastapi-postgres': 'fastapi',
+  'hono-bun': 'hono',
+  'rails-hotwire': 'rails',
+  'phoenix-liveview': 'phoenix',
+  'cloudflare-workers': 'workers',
+  'chrome-extension-mv3': 'chrome',
+  'unity6': 'unity',
+  'godot4': 'godot',
+  'npm-package': 'npm',
+  'homebrew-formula': 'brew',
+  'pypi-package': 'pypi',
+  'cargo-crate': 'cargo',
+  'rubygem': 'gem',
+  'docker-image': 'docker',
+  'github-action': 'action',
+  'cli-bun-compile': 'bun',
+  'vscode-extension': 'vscode',
+  'jetbrains-plugin': 'jetbrains',
+  'raycast-extension': 'raycast',
+  'obsidian-plugin': 'obsidian',
+  'lokus-plugin': 'lokus',
+};
+
 function listStacks() {
   if (!existsSync(RULEBOOKS_DIR)) return [];
   return readdirSync(RULEBOOKS_DIR)
     .filter(f => f.endsWith('.md'))
     .map(f => f.replace(/\.md$/, ''))
     .sort();
+}
+
+function resolveStack(input) {
+  if (ALIASES[input]) return ALIASES[input];
+  return input;
 }
 
 function help() {
@@ -61,16 +101,17 @@ if (args[0] === '--version' || args[0] === '-v') {
   exit(0);
 }
 
-const stack = args[0];
+const input = args[0];
+const stack = resolveStack(input);
 let outPath = 'RULEBOOK.md';
 const oFlag = args.findIndex(a => a === '-o' || a === '--out');
 if (oFlag !== -1 && args[oFlag + 1]) outPath = args[oFlag + 1];
 
 const src = join(RULEBOOKS_DIR, `${stack}.md`);
 if (!existsSync(src)) {
-  stderr.write(paint('red', '✗ ') + `unknown stack: ${stack}\n`);
+  stderr.write(paint('red', '✗ ') + `unknown stack: ${input}\n`);
   const stacks = listStacks();
-  const matches = stacks.filter(s => s.toLowerCase().includes(stack.toLowerCase()));
+  const matches = stacks.filter(s => s.toLowerCase().includes(input.toLowerCase()));
   if (matches.length) {
     stderr.write(paint('dim', '  did you mean: ') + matches.map(m => paint('cyan', m)).join(', ') + '\n');
   }

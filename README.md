@@ -12,7 +12,7 @@ The name comes from the legal term *pandect*: a comprehensive single-volume trea
 
 ```sh
 # pick a stack — drops RULEBOOK.md into your current folder
-npx pandect nextjs-supabase
+npx pandect nextjs
 
 # then start a Claude Code / Codex / Cursor session in that folder.
 # tell the agent to read RULEBOOK.md, hand it your product idea, watch it ship.
@@ -21,7 +21,7 @@ npx pandect nextjs-supabase
 Or, no Node required — direct download via curl:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/cleanmcp/pandect/main/rulebooks/nextjs-supabase.md -o RULEBOOK.md
+curl -fsSL https://raw.githubusercontent.com/cleanmcp/pandect/main/rulebooks/nextjs.md -o RULEBOOK.md
 ```
 
 ## Available stacks
@@ -30,43 +30,50 @@ curl -fsSL https://raw.githubusercontent.com/cleanmcp/pandect/main/rulebooks/nex
 npx pandect --list
 ```
 
-Currently shipping rulebooks for:
-
 **Apps**
-- `swiftui-ios` — SwiftUI + SwiftData (iPhone/iPad)
-- `swiftui-mac` — SwiftUI + SwiftData (native Mac)
-- `jetpack-compose-android` — Kotlin + Jetpack Compose + Room
-- `react-native-expo` — Expo + EAS + expo-router
-- `flutter-firebase` — Flutter + Firebase + Riverpod
-- `electron-react` — Electron + React + SQLite
-- `tauri-svelte` — Tauri 2 + Svelte 5 + Rust
-- `nextjs-supabase` — Next.js App Router + Supabase + Stripe + Vercel
-- `vite-react` — Vite + React SPA + TanStack Router/Query
-- `astro-cloudflare` — Astro + Cloudflare Workers
-- `sveltekit` — SvelteKit + Svelte 5 + Drizzle + Vercel
-- `remix` — React Router 7 (framework mode) + Drizzle + Vercel
-- `fastapi-postgres` — FastAPI + Postgres + uv + Alembic
-- `hono-bun` — Hono + Bun + Drizzle + Cloudflare
-- `rails-hotwire` — Rails 8 + Hotwire + Postgres + Kamal
-- `phoenix-liveview` — Phoenix LiveView + Elixir + Ecto
-- `cloudflare-workers` — Workers + D1 + KV + R2 + Durable Objects
-- `chrome-extension-mv3` — Chrome MV3 + WXT + side panel
-- `unity6` — Unity 6 + C# + URP
-- `godot4` — Godot 4 + GDScript
+
+| Stack | What you get |
+|---|---|
+| `ios` | SwiftUI + SwiftData (iPhone/iPad) |
+| `mac` | SwiftUI + SwiftData (native Mac) |
+| `android` | Kotlin + Jetpack Compose + Room |
+| `expo` | React Native + Expo + EAS + expo-router |
+| `flutter` | Flutter + Firebase + Riverpod |
+| `electron` | Electron + React + SQLite |
+| `tauri` | Tauri 2 + Svelte 5 + Rust |
+| `nextjs` | Next.js App Router + Supabase + Stripe + Vercel |
+| `vite` | Vite + React SPA + TanStack Router/Query |
+| `astro` | Astro + Cloudflare Workers |
+| `sveltekit` | SvelteKit + Svelte 5 + Drizzle + Vercel |
+| `remix` | React Router 7 (framework mode) + Drizzle + Vercel |
+| `fastapi` | FastAPI + Postgres + uv + Alembic |
+| `hono` | Hono + Bun + Drizzle + Cloudflare |
+| `rails` | Rails 8 + Hotwire + Postgres + Kamal |
+| `phoenix` | Phoenix LiveView + Elixir + Ecto |
+| `workers` | Cloudflare Workers + D1 + KV + R2 + Durable Objects |
+| `chrome` | Chrome MV3 extension + WXT + side panel |
+| `unity` | Unity 6 + C# + URP |
+| `godot` | Godot 4 + GDScript |
 
 **Distribution / publish**
-- `npm-package` — TypeScript library to npmjs
-- `homebrew-formula` — Homebrew tap for a CLI
-- `pypi-package` — Python library/CLI to PyPI (uv + OIDC)
-- `cargo-crate` — Rust library + CLI to crates.io
-- `rubygem` — Ruby gem to RubyGems
-- `docker-image` — multi-arch image to GHCR + Docker Hub
-- `github-action` — JS/composite/Docker actions to Marketplace
-- `cli-bun-compile` — single-binary CLI via Bun + brew/npm distribution
-- `vscode-extension` — VS Code Marketplace + Open VSX
-- `jetbrains-plugin` — JetBrains Marketplace
-- `raycast-extension` — Raycast store
-- `obsidian-plugin` — Obsidian community plugins
+
+| Stack | What you get |
+|---|---|
+| `npm` | TypeScript library to npmjs |
+| `brew` | Homebrew tap for a CLI |
+| `pypi` | Python library/CLI to PyPI (uv + OIDC) |
+| `cargo` | Rust library + CLI to crates.io |
+| `gem` | Ruby gem to RubyGems |
+| `docker` | multi-arch image to GHCR + Docker Hub |
+| `action` | GitHub Action to Marketplace |
+| `bun` | single-binary CLI via `bun build --compile` |
+| `vscode` | VS Code Marketplace + Open VSX extension |
+| `jetbrains` | JetBrains IDE plugin to Marketplace |
+| `raycast` | Raycast store extension |
+| `obsidian` | Obsidian community plugin |
+| `lokus` | Lokus plugin |
+
+The old long names (`swiftui-ios`, `nextjs-supabase`, `chrome-extension-mv3`, etc.) still work as aliases for backward compatibility.
 
 ## How a rulebook is structured
 
@@ -110,7 +117,7 @@ Or install globally:
 
 ```sh
 npm i -g pandect
-pandect nextjs-supabase
+pandect nextjs
 ```
 
 ## Contributing
