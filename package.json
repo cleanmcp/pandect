@@ -1,0 +1,41 @@
+{
+  "name": "@cleanmcp/lore",
+  "version": "0.1.0",
+  "description": "Opinionated rulebooks for AI coding agents — one .md per stack. Hand the file to Claude Code, Codex, or Cursor and ship.",
+  "type": "module",
+  "bin": {
+    "lore": "bin/lore.mjs"
+  },
+  "files": [
+    "bin/",
+    "rulebooks/"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "homepage": "https://github.com/cleanmcp/project-lore",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cleanmcp/project-lore.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cleanmcp/project-lore/issues"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "keywords": [
+    "claude-code",
+    "claude",
+    "codex",
+    "cursor",
+    "rulebook",
+    "agent",
+    "ai-coding",
+    "lore",
+    "scaffold",
+    "stack"
+  ]
+}
