@@ -1,0 +1,51 @@
+name: New stack
+description: Propose a stack that isn't covered yet
+labels: ["new-stack"]
+body:
+  - type: input
+    id: stack
+    attributes:
+      label: Stack
+      description: Be specific. Pin the major libraries.
+      placeholder: "Solid + Supabase + Tailwind + Vercel"
+    validations:
+      required: true
+  - type: dropdown
+    id: target_os
+    attributes:
+      label: Target OSes
+      multiple: true
+      options:
+        - macOS
+        - Windows
+        - Linux
+        - iOS
+        - Android
+        - Web
+        - Other (specify in description)
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why this stack belongs alongside the existing 33
+      description: What problem does it solve that an existing rulebook doesn't? Who would use it?
+    validations:
+      required: true
+  - type: input
+    id: short_name
+    attributes:
+      label: Suggested short name
+      description: Single word, lowercase. Will become `npx pandect <name>`.
+      placeholder: "solid"
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I've checked the [stack list](https://github.com/cleanmcp/pandect#available-stacks) and this isn't already covered
+          required: true
+        - label: I'm willing to help review the generated rulebook for accuracy
+          required: false

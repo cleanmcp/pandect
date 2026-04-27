@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Read a rulebook before opening an issue
+    url: https://github.com/cleanmcp/pandect/tree/main/rulebooks
+    about: Most "how do I do X with stack Y" questions are answered in the rulebook itself.
+  - name: Discussions
+    url: https://github.com/cleanmcp/pandect/discussions
+    about: Open-ended questions, idea brainstorming, show-and-tell.

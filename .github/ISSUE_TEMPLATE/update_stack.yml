@@ -1,0 +1,38 @@
+name: Update stack
+description: Flag drift, deprecation, or a new gotcha in an existing rulebook
+labels: ["update-stack"]
+body:
+  - type: input
+    id: stack
+    attributes:
+      label: Which stack
+      description: The short name (e.g. nextjs, ios, hono).
+      placeholder: "nextjs"
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of update
+      options:
+        - Major version bump (e.g. v14 to v15)
+        - Library deprecated / replaced
+        - New common AI-coder failure mode
+        - Security advisory affecting the stack
+        - Documented version is wrong
+        - Section is incomplete or outdated
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: What changed and where
+      description: Cite the upstream release notes / migration guide / security advisory if you have one.
+    validations:
+      required: true
+  - type: input
+    id: target_version
+    attributes:
+      label: Versions the new rulebook should target
+      placeholder: "Next.js 15.x, Supabase JS 2.50+"

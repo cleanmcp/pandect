@@ -109,7 +109,7 @@ if (oFlag !== -1 && args[oFlag + 1]) outPath = args[oFlag + 1];
 
 const src = join(RULEBOOKS_DIR, `${stack}.md`);
 if (!existsSync(src)) {
-  stderr.write(paint('red', '✗ ') + `unknown stack: ${input}\n`);
+  stderr.write(paint('red', 'error: ') + `unknown stack: ${input}\n`);
   const stacks = listStacks();
   const matches = stacks.filter(s => s.toLowerCase().includes(input.toLowerCase()));
   if (matches.length) {
@@ -120,12 +120,12 @@ if (!existsSync(src)) {
 }
 
 if (existsSync(outPath)) {
-  stderr.write(paint('yellow', '! ') + `${outPath} exists — overwriting.\n`);
+  stderr.write(paint('yellow', 'warn: ') + `${outPath} exists — overwriting.\n`);
 }
 
 const content = readFileSync(src, 'utf8');
 writeFileSync(outPath, content);
 const lineCount = content.split('\n').length;
 const sizeKB = Math.round(content.length / 1024);
-stdout.write(paint('green', '✓ ') + `wrote ${paint('bold', outPath)} ${paint('dim', `(${stack}, ${lineCount} lines, ${sizeKB} KB)`)}\n`);
+stdout.write(`wrote ${paint('bold', outPath)} ${paint('dim', `(${stack}, ${lineCount} lines, ${sizeKB} KB)`)}\n`);
 stdout.write(paint('dim', '  hand this file + your idea to Claude Code, Codex, or Cursor.') + '\n');
