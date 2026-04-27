@@ -1,16 +1,18 @@
-# lore
+# pandect
 
 > Opinionated rulebooks for AI coding agents. One `.md` per stack. Hand it to Claude Code, Codex, or Cursor with your idea — they bootstrap, build, and ship.
 
 ## Why
 
-Non-coders and senior devs alike waste hours on the same questions every new project: what package manager, which test runner, how do I deploy, what does my AI agent need to know? `lore` packages that decision-tree into one self-contained markdown file per stack — every version cited, every config inlined, every command copy-pasteable. The agent reads it once and stops asking.
+Non-coders and senior devs alike waste hours on the same questions every new project: what package manager, which test runner, how do I deploy, what does my AI agent need to know? `pandect` packages that decision-tree into one self-contained markdown file per stack — every version cited, every config inlined, every command copy-pasteable. The agent reads it once and stops asking.
+
+The name comes from the legal term *pandect*: a comprehensive single-volume treatise that covers an entire body of law. That's what each rulebook is — a complete code for one stack.
 
 ## Quick start
 
 ```sh
 # pick a stack — drops RULEBOOK.md into your current folder
-npx @cleanmcp/lore nextjs-supabase
+npx pandect nextjs-supabase
 
 # then start a Claude Code / Codex / Cursor session in that folder.
 # tell the agent to read RULEBOOK.md, hand it your product idea, watch it ship.
@@ -25,7 +27,7 @@ curl -fsSL https://raw.githubusercontent.com/cleanmcp/project-lore/main/rulebook
 ## Available stacks
 
 ```sh
-npx @cleanmcp/lore --list
+npx pandect --list
 ```
 
 Currently shipping rulebooks for:
@@ -61,10 +63,10 @@ Currently shipping rulebooks for:
 - `docker-image` — multi-arch image to GHCR + Docker Hub
 - `github-action` — JS/composite/Docker actions to Marketplace
 - `cli-bun-compile` — single-binary CLI via Bun + brew/npm distribution
-- `vscode-extension` — VS Code Marketplace + Open VSX
-- `jetbrains-plugin` — JetBrains Marketplace
-- `raycast-extension` — Raycast store
-- `obsidian-plugin` — Obsidian community plugins
+- `vscode-extension` — VS Code Marketplace + Open VSX *(in flight)*
+- `jetbrains-plugin` — JetBrains Marketplace *(in flight)*
+- `raycast-extension` — Raycast store *(in flight)*
+- `obsidian-plugin` — Obsidian community plugins *(in flight)*
 
 ## How a rulebook is structured
 
@@ -97,18 +99,18 @@ If it's not in the rulebook, the agent will guess. So nothing is missing.
 ## CLI usage
 
 ```sh
-npx @cleanmcp/lore <stack>              # writes ./RULEBOOK.md
-npx @cleanmcp/lore <stack> -o foo.md    # writes ./foo.md
-npx @cleanmcp/lore --list               # one stack per line
-npx @cleanmcp/lore --version
-npx @cleanmcp/lore --help
+npx pandect <stack>              # writes ./RULEBOOK.md
+npx pandect <stack> -o foo.md    # writes ./foo.md
+npx pandect --list               # one stack per line
+npx pandect --version
+npx pandect --help
 ```
 
 Or install globally:
 
 ```sh
-npm i -g @cleanmcp/lore
-lore nextjs-supabase
+npm i -g pandect
+pandect nextjs-supabase
 ```
 
 ## Contributing

@@ -26,13 +26,13 @@ function listStacks() {
 function help() {
   const stacks = listStacks();
   const lines = [
-    paint('bold', 'lore') + ' — opinionated rulebooks for AI coding agents',
+    paint('bold', 'pandect') + ' — opinionated rulebooks for AI coding agents',
     '',
     paint('bold', 'Usage:'),
-    '  npx @cleanmcp/lore <stack>          download rulebook to ./RULEBOOK.md',
-    '  npx @cleanmcp/lore <stack> -o file  write to a custom path',
-    '  npx @cleanmcp/lore --list           list every available stack',
-    '  npx @cleanmcp/lore --help           show this help',
+    '  npx pandect <stack>          download rulebook to ./RULEBOOK.md',
+    '  npx pandect <stack> -o file  write to a custom path',
+    '  npx pandect --list           list every available stack',
+    '  npx pandect --help           show this help',
     '',
     paint('bold', `Available stacks (${stacks.length}):`),
   ];
@@ -74,7 +74,7 @@ if (!existsSync(src)) {
   if (matches.length) {
     stderr.write(paint('dim', '  did you mean: ') + matches.map(m => paint('cyan', m)).join(', ') + '\n');
   }
-  stderr.write(paint('dim', '  run `npx @cleanmcp/lore --list` to see all stacks.') + '\n');
+  stderr.write(paint('dim', '  run `npx pandect --list` to see all stacks.') + '\n');
   exit(1);
 }
 

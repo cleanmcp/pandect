@@ -20,12 +20,12 @@ jobs:
           node-version: ${{ matrix.node }}
       - name: CLI smoke test
         run: |
-          node bin/lore.mjs --version
-          node bin/lore.mjs --list
-          node bin/lore.mjs --help
+          node bin/pandect.mjs --version
+          node bin/pandect.mjs --list
+          node bin/pandect.mjs --help
       - name: Round-trip a rulebook
         shell: bash
         run: |
-          node bin/lore.mjs godot4 -o /tmp/RB.md
+          node bin/pandect.mjs godot4 -o /tmp/RB.md
           test -s /tmp/RB.md
           head -1 /tmp/RB.md

@@ -1,10 +1,10 @@
 {
-  "name": "@cleanmcp/lore",
+  "name": "pandect",
   "version": "0.1.0",
   "description": "Opinionated rulebooks for AI coding agents — one .md per stack. Hand the file to Claude Code, Codex, or Cursor and ship.",
   "type": "module",
   "bin": {
-    "lore": "bin/lore.mjs"
+    "pandect": "bin/pandect.mjs"
   },
   "files": [
     "bin/",
@@ -34,7 +34,7 @@
     "rulebook",
     "agent",
     "ai-coding",
-    "lore",
+    "pandect",
     "scaffold",
     "stack"
   ]

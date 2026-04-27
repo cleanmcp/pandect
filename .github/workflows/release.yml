@@ -40,8 +40,8 @@ jobs:
 
       - name: Smoke-test CLI
         run: |
-          node bin/lore.mjs --list | head -5
-          node bin/lore.mjs --version
+          node bin/pandect.mjs --list | head -5
+          node bin/pandect.mjs --version
 
       - name: Publish to npm with provenance
         run: npm publish --access public --provenance
