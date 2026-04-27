@@ -63,10 +63,10 @@ Currently shipping rulebooks for:
 - `docker-image` — multi-arch image to GHCR + Docker Hub
 - `github-action` — JS/composite/Docker actions to Marketplace
 - `cli-bun-compile` — single-binary CLI via Bun + brew/npm distribution
-- `vscode-extension` — VS Code Marketplace + Open VSX *(in flight)*
-- `jetbrains-plugin` — JetBrains Marketplace *(in flight)*
-- `raycast-extension` — Raycast store *(in flight)*
-- `obsidian-plugin` — Obsidian community plugins *(in flight)*
+- `vscode-extension` — VS Code Marketplace + Open VSX
+- `jetbrains-plugin` — JetBrains Marketplace
+- `raycast-extension` — Raycast store
+- `obsidian-plugin` — Obsidian community plugins
 
 ## How a rulebook is structured
 
