@@ -13,13 +13,13 @@
   "engines": {
     "node": ">=20"
   },
-  "homepage": "https://github.com/cleanmcp/project-lore",
+  "homepage": "https://github.com/cleanmcp/pandect",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cleanmcp/project-lore.git"
+    "url": "git+https://github.com/cleanmcp/pandect.git"
   },
   "bugs": {
-    "url": "https://github.com/cleanmcp/project-lore/issues"
+    "url": "https://github.com/cleanmcp/pandect/issues"
   },
   "license": "MIT",
   "publishConfig": {

@@ -39,7 +39,7 @@ function help() {
   for (const s of stacks) lines.push('  ' + paint('cyan', s));
   lines.push('');
   lines.push(paint('dim', 'Hand the resulting RULEBOOK.md + your idea to Claude Code, Codex, or Cursor.'));
-  lines.push(paint('dim', 'https://github.com/cleanmcp/project-lore'));
+  lines.push(paint('dim', 'https://github.com/cleanmcp/pandect'));
   stdout.write(lines.join('\n') + '\n');
 }
 

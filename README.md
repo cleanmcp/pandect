@@ -21,7 +21,7 @@ npx pandect nextjs-supabase
 Or, no Node required — direct download via curl:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/cleanmcp/project-lore/main/rulebooks/nextjs-supabase.md -o RULEBOOK.md
+curl -fsSL https://raw.githubusercontent.com/cleanmcp/pandect/main/rulebooks/nextjs-supabase.md -o RULEBOOK.md
 ```
 
 ## Available stacks
